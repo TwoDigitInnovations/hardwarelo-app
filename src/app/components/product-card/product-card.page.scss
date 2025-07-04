@@ -1,0 +1,132 @@
+.goToItemsCard {
+    border-radius: 15px;
+    background: white;
+
+    box-shadow: 0px 0px 8px 0px #00000029;
+    position: relative;
+}
+
+.starDiv {
+    background: url('../../../assets/images/star-1.png') no-repeat;
+    height: 54px !important;
+    width: 55px !important;
+    object-fit: contain;
+    position: absolute;
+    top: -20px;
+    right: -15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.offers_text {
+    font-size: 10px;
+    font-weight: 500;
+    color: white;
+    margin: 0px;
+    text-align: center;
+}
+
+.goToImg {
+    // width: 180px;
+    height: 100px;
+    object-fit: contain;
+}
+
+.ultraCement_text {
+    font-size: 14px;
+    font-weight: 600;
+    color: black;
+    margin: 0px;
+
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height: 30px;
+}
+
+.goToItems_div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.ultraCement_text2 {
+    font-size: 12px;
+    font-weight: 400;
+    color: black;
+    margin: 0px;
+}
+
+.ultraCement_text3 {
+    font-size: 14px;
+    font-weight: 600;
+    color: #0D34BF;
+    margin: 0px;
+}
+
+.addIconDiv {
+    height: 32px;
+    width: 32px;
+    border-radius: 8px;
+    background: white;
+    box-shadow: 0px 0px 4px 0px #99267C29;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.addIcon {
+    height: 16px;
+    width: 16px;
+    color: #0D34BF;
+}
+
+.mainQty_div {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.remove_div {
+    width: 32px;
+    height: 32px;
+    border-radius: 8px 0px 0px 8px;
+    background: #0D34BF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.remove_icon {
+    width: 16px;
+    height: 16px;
+    color: white;
+}
+
+.input_text {
+    width: 32px;
+    height: 32px;
+    background: #F3F3F3;
+    outline: none;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+}
+
+.add_div {
+    width: 32px;
+    height: 32px;
+    border-radius: 0px 8px 8px 0px;
+    background: #0D34BF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

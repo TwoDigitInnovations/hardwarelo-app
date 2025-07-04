@@ -1,0 +1,87 @@
+<ion-header>
+  <div class="mainHeader">
+    <div class="left">
+      <ion-icon class="back_icon" (click)="goBack()" name="chevron-back-outline"></ion-icon>
+      <p class="cart_text">Product Details</p>
+    </div>
+  </div>
+</ion-header>
+
+<ion-content class="mainBackground">
+  <div style="padding: 20px;">
+    <div class="w_100" *ngIf="productIdData&&productIdData?.varients?.length>0">
+      <swiper-container [modules]="swiperModules" [options]="options" pagination="true" autoplay="true"
+        centered-slides="true" autoplay-delay="2500" autoplay-disable-on-interaction="false" spacebetween="10">
+        <swiper-slide *ngFor="let item of sizeData.image">
+          <div class="w_100 center">
+            <img class="w_100" style="height: 200px; object-fit: contain;" [src]="item" />
+          </div>
+        </swiper-slide>
+      </swiper-container>
+    </div>
+
+    <div class="mainCementDiv">
+      <p class="cement_text">{{productIdData?.name}}</p>
+
+      <div class="d_flex" style="gap: 10px;" *ngIf="productIdData?.varients?.length>1">
+        <p *ngFor="let item of productIdData?.varients" [ngStyle]="{background: item?.color}"
+          (click)="selectedSlotColor(item)" [ngClass]="sizeData?.color===item?.color?'color_dot':'color_dot1'"></p>
+      </div>
+    </div>
+
+    <div class="mainOffDiv">
+      <div class="left" style="gap: 20px;">
+        <del class="off_text-1">₹{{productIdData?.price}}</del>
+        <p class="off_text">₹{{discount}}</p>
+      </div>
+      <!-- <del class="off_text-1">₹{{productIdData?.offer}}</del><span class="off_text-2">{{off}}% OFF</span> -->
+      <ion-button *ngIf="!selctedCartItem?._id" class="add_btn" (click)="cartPage()">ADD</ion-button>
+
+
+      <div class="mainQty_div" *ngIf="selctedCartItem?._id">
+        <div class="remove_div" (click)="removeItem(selctedCartItem)">
+          <ion-icon class="remove_icon" name="remove-outline"></ion-icon>
+        </div>
+        <p class="input_text mar_0">{{selctedCartItem?.qty}}</p>
+        <div class="add_div" (click)="addItem(selctedCartItem)">
+          <ion-icon class="remove_icon" name="add-outline"></ion-icon>
+        </div>
+      </div>
+    </div>
+    <p style="background:#0D57FE;
+;color:white;font-size: 12px;padding:5px;margin: 0px;width: max-content;">
+      <span style="font-size: 12px;">Delivery
+        in</span> : <span #popoutBox style="font-weight: 900;">{{deliveryTime}}</span>
+    </p>
+
+    <div style="height: 4px; background: #00000010;"></div>
+
+    <div class="mainProductInformationDiv">
+      <!-- <div class="productInformationDiv">
+        <p class="productInformation_text">Product Information</p>
+      </div> -->
+      <p class="countryOfOrigin_text">Short Description</p>
+      <p class="india_text">{{productIdData?.short_description}}</p>
+      <p class="countryOfOrigin_text">Long Description</p>
+      <p class="india_text">{{productIdData?.long_description}}</p>
+    </div>
+  </div>
+
+  <div class="frequentlyBoughtTogether_card" *ngIf="productIdData?.recommended?.length >0">
+    <div style="padding: 20px 20px 0px 20px;">
+      <p class="frequentlyBoughtTogether_text">Recommended</p>
+      <div class="w_100" style="display: flex; gap: 20px; overflow-y: auto;padding: 20px 0px;">
+        <app-product-card *ngFor="let item of productIdData?.recommended" [item]="item"></app-product-card>
+      </div>
+    </div>
+  </div>
+
+  <div class="frequentlyBoughtTogether_card" *ngIf="productData.length >0">
+    <div style="padding: 20px 20px 0px 20px;">
+      <p class="frequentlyBoughtTogether_text">Frequently Bought Together</p>
+      <div class="w_100" style="display: flex; gap: 20px; overflow-y: auto;padding: 20px 0px;">
+        <app-product-card *ngFor="let item of productData" [item]="item"></app-product-card>
+      </div>
+    </div>
+  </div>
+</ion-content>

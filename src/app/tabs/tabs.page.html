@@ -1,0 +1,64 @@
+<ion-tabs (ionTabsWillChange)="selected($event)">
+
+  <ion-tab-bar slot="bottom">
+    <ion-tab-button tab="home">
+      <div class="tabsSelected center" *ngIf="currentTabs==='home'">
+        <ion-icon class="icon" aria-hidden="true" src="../../assets/tabsIcon/tabs-icon-1selected.svg"></ion-icon>
+        <ion-label class="labelText">Home</ion-label>
+      </div>
+      <div class="tabsSelected center" *ngIf="currentTabs!=='home'">
+        <ion-icon class="icon" aria-hidden="true" src="../../assets/tabsIcon/tabs-icon-1.svg"></ion-icon>
+        <ion-label class="labelText1">Home</ion-label>
+      </div>
+    </ion-tab-button>
+
+    <ion-tab-button tab="super-categories">
+      <div class="tabsSelected center" *ngIf="currentTabs==='super-categories'">
+        <ion-icon class="icon" aria-hidden="true" src="../../assets/tabsIcon/tabs-icon-2selected.svg"></ion-icon>
+        <ion-label class="labelText">Categories</ion-label>
+      </div>
+      <div class="tabsSelected center" *ngIf="currentTabs!=='super-categories'">
+        <ion-icon class="icon" aria-hidden="true" src="../../assets/tabsIcon/tabs-icon-2.svg"></ion-icon>
+        <ion-label class="labelText1">Categories</ion-label>
+      </div>
+    </ion-tab-button>
+
+    <!-- <ion-tab-button tab="offers">
+      <div class="tabsSelected center" *ngIf="currentTabs==='offers'">
+        <ion-icon class="icon" aria-hidden="true" src="../../assets/tabsIcon/tabs-icon-3selected.svg"></ion-icon>
+        <ion-label class="labelText">Offers</ion-label>
+      </div>
+      <div class="tabsSelected center" *ngIf="currentTabs!=='offers'">
+        <ion-icon class="icon" aria-hidden="true" src="../../assets/tabsIcon/tabs-icon-3.svg"></ion-icon>
+        <ion-label class="labelText1">Offers</ion-label>
+      </div>
+    </ion-tab-button> -->
+
+    <ion-tab-button tab="cart">
+      <div class="tabsSelected center" *ngIf="currentTabs==='cart'">
+        <ion-icon class="icon" aria-hidden="true" src="../../assets/tabsIcon/tabs-icon-4selected.svg"></ion-icon>
+        <ion-label class="labelText">Cart</ion-label>
+      </div>
+      <div class="tabsSelected center" *ngIf="currentTabs!=='cart'">
+        <ion-icon class="icon" aria-hidden="true" src="../../assets/tabsIcon/tabs-icon-4.svg"></ion-icon>
+        <ion-label class="labelText1">Cart</ion-label>
+      </div>
+    </ion-tab-button>
+
+    <ion-tab-button tab="settings">
+      <div class="tabsSelected center" *ngIf="currentTabs==='settings'">
+        <!-- <ion-icon class="icon" name="settings-outline"></ion-icon> -->
+        <ion-icon class="icon1" name="person-circle-outline"></ion-icon>
+        <!-- <ion-icon class="icon" aria-hidden="true" src="../../assets/tabsIcon/tabs-icon-4selected.svg"></ion-icon> -->
+        <ion-label class="labelText">Account</ion-label>
+      </div>
+      <div class="tabsSelected center" *ngIf="currentTabs!=='settings'">
+        <!-- <ion-icon class="icon" name="settings-outline"></ion-icon> -->
+        <ion-icon class="icon1" name="person-circle-outline"></ion-icon>
+        <!-- <ion-icon class="icon" aria-hidden="true" src="../../assets/tabsIcon/tabs-icon-4.svg"></ion-icon> -->
+        <ion-label class="labelText1">Account</ion-label>
+      </div>
+    </ion-tab-button>
+  </ion-tab-bar>
+
+</ion-tabs>

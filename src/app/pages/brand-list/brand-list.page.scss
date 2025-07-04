@@ -1,0 +1,92 @@
+ion-header {
+    background: #0D57FE;
+    padding-top: var(--safe-area-inset-top) !important;
+}
+
+.header-md {
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+}
+
+.mainHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.back_icon {
+    height: 25px;
+    width: 25px;
+    color: white;
+}
+
+.location_icon {
+    height: 24px;
+    width: 20px;
+    color: white;
+}
+
+.number_text {
+    font-size: 16px;
+    font-weight: 500;
+    color: white;
+    margin: 0px;
+}
+
+.user_icon {
+    width: 18px;
+    height: 18px;
+}
+
+.username_div {
+    background: white;
+    height: 20px;
+    width: 20px;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.username_text {
+    font-size: 14px;
+    color: #001F8D;
+    font-weight: 700;
+    margin: 0px;
+}
+
+.mainBackground {
+    --background: white;
+    height: 100%;
+    width: 100%;
+}
+
+.goToItems_div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.goToItems_text {
+    font-size: 18px;
+    font-weight: 600;
+    color: black;
+    margin: 0px 0px 0px 0px;
+    padding: 0px 20px;
+}
+
+.noProducts_div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    padding: 0px 20px;
+}
+
+.noProducts_text {
+    font-size: 24px;
+    font-weight: 700;
+    color: black;
+    margin: 0px;
+}

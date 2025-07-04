@@ -1,0 +1,37 @@
+<ion-header>
+  <div class="mainHeader">
+    <div class="left" style="padding:20px 0px;">
+      <ion-icon class="back_icon" name="chevron-back-outline" (click)="goBack()"></ion-icon>
+      <p class="cart_text">Coupon</p>
+    </div>
+  </div>
+</ion-header>
+
+<ion-content class="mainBackground">
+  <div style="padding:20px 20px 0px 20px;">
+    <div class="card" *ngFor="let item of ordersData" (click)="writeToClipboard(item?.coupon_code)">
+      <p class="productName_text">coupon code: HLO{{item?.coupon_code}}</p>
+      <p class="quantity_text">Coupon Type: {{item?.coupon_type}}</p>
+      <div class="w_100" *ngFor="let product_name of item?.product_name">
+        <p class="quantity_text" *ngIf="item?.coupon_type==='For Products'">Product Name: {{product_name?.name}}</p>
+      </div>
+      <div class="w_100" *ngFor="let category of item?.category">
+        <p class="quantity_text" *ngIf="item?.coupon_type==='For Categories'">Category Name: {{category?.name}}</p>
+      </div>
+      <p class="quantity_text" *ngIf="item?.coupon_type==='For Total Orders'||item?.coupon_type==='Single Use Coupon'">
+        Minimum Shopping:
+        ₹{{item?.minimum_shopping}}</p>
+      <p class="quantity_text" *ngIf="item?.coupon_type==='For Total Orders' ||item?.coupon_type==='Single Use Coupon'">
+        Maximum Discount Amount:
+        ₹{{item?.maximum_discount_amount}}</p>
+      <p class="quantity_text" *ngIf="item?.discount_type==='Normal'">Discount: ₹{{item?.Discount}}</p>
+      <p class="quantity_text" *ngIf="item?.discount_type==='Percentage'">Discount: {{item?.Discount}}%</p>
+      <p class="quantity_text">Date: {{moment(item?.date).format("DD MMM YYYY")}}</p>
+      <!-- , h:mm:ss a -->
+    </div>
+  </div>
+</ion-content>
+
+<div class="noProducts_div" *ngIf="ordersData.length === 0">
+  <p class="noProducts_text">No Coupon</p>
+</div>

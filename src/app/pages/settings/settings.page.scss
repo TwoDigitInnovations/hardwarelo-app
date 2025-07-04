@@ -1,0 +1,181 @@
+ion-header {
+    background: #0D57FE;
+    padding-top: var(--safe-area-inset-top) !important;
+}
+
+.header-md {
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+}
+
+.mainHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0px 20px;
+}
+
+.cart_text {
+    font-size: 20px;
+    font-weight: 500;
+    color: white;
+    margin: 0px;
+    padding-left: 10px;
+}
+
+.back_icon {
+    height: 25px;
+    width: 25px;
+    color: white;
+}
+
+.mainBackground {
+    --background: #ECF0FA;
+    height: 100%;
+    width: 100%;
+}
+
+.card {
+    width: 100%;
+    border-radius: 15px;
+    background: white;
+    padding: 10px;
+    box-shadow: 0px 0px 8px 0px #00000029;
+    margin-bottom: 20px;
+}
+
+.username_div {
+    background: #001F8D;
+    height: 60px;
+    width: 60px;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.username_text {
+    font-size: 14px;
+    color: White;
+    font-weight: 700;
+    margin: 0px;
+}
+
+.userDetails_div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 5px !important;
+}
+
+.welcome_text {
+    color: #001F8D;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: 0px;
+}
+
+.name_text {
+    color: #001F8D;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin: 0px;
+}
+
+.phoneNumber_text {
+    color: #001F8D;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: 0px;
+}
+
+.logOut_icon {
+    height: 30px;
+    width: 30px;
+    object-fit: contain;
+    color: #001F8D;
+    ;
+}
+
+.logout_text {
+    color: #001F8D;
+    font-size: 16px;
+    font-weight: 700;
+    margin: 10px 0px;
+}
+
+.signIn_btn {
+    --border-radius: 14px;
+    --background: #001F8D;
+    color: #FFF;
+    text-align: center;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    width: 150%;
+    margin: 0px;
+    height: 50px;
+    text-transform: none;
+}
+
+.signIn_btn-1 {
+    border-radius: 14px;
+    --background: none;
+    border: 1px solid #001F8D;
+    ;
+    color: #001F8D;
+    text-align: center;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    width: 150%;
+    margin: 0px;
+    height: 50px;
+    text-transform: none;
+    --box-shadow: none;
+}
+
+.card-1 {
+    width: 100%;
+    border-radius: 15px;
+    background: white;
+    padding: 10px;
+    box-shadow: 0px 0px 8px 0px #00000029;
+    margin-bottom: 20px;
+}
+
+.userCricle_img {
+    width: 50px;
+    height: 50px;
+    color: #001F8D;
+}
+
+.mineUserProfile_div {
+    justify-content: flex-start;
+    align-items: center;
+    display: flex;
+}
+
+.userProfile_text {
+    color: #001F8D;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin: 0px;
+}
+
+.forward_img {
+    width: 30px;
+    height: 30px;
+    color: #001F8D;
+}

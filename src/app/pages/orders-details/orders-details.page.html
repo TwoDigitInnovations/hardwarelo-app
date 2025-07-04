@@ -1,0 +1,51 @@
+<ion-header>
+  <div class="mainHeader">
+    <div class="left">
+      <ion-icon class="back_icon" (click)="goBack()" name="chevron-back-outline"></ion-icon>
+      <p class="cart_text">Orders Details</p>
+    </div>
+  </div>
+</ion-header>
+
+<ion-content class="mainBackground">
+  <div style="padding: 20px;">
+
+    <div class="w_100" *ngIf="productIdData&&productIdData?.image?.length>0">
+      <swiper-container [modules]="swiperModules" [options]="options" pagination="true" autoplay="true"
+        centered-slides="true" autoplay-delay="2500" autoplay-disable-on-interaction="false" spacebetween="10">
+        <swiper-slide *ngFor="let item of productIdData?.image">
+          <div class="w_100 center">
+            <img class="w_100" style="height: 200px; object-fit: contain;" [src]="item" />
+          </div>
+        </swiper-slide>
+      </swiper-container>
+    </div>
+
+    <div class="mainCementDiv">
+      <p class="brandName_text">{{productIdData?.product?.name}}</p>
+    </div>
+
+    <div class="mainOffDiv">
+      <p class="off_text">Price: <span class="f_700">₹{{productIdData?.price}}</span></p>
+      <p class="qty_text">Discount Price: <span class="f_700">{{mainProductIdData?.total}}</span></p>
+      <p class="qty_text">Qty: <span class="f_700">{{productIdData?.qty}}</span></p>
+      <p class="qty_text">Delivery Fee: <span class="f_700">{{mainProductIdData?.delivery_fee}}</span></p>
+    </div>
+
+    <div style="height: 4px; background: #00000010;"></div>
+
+    <p class="shippingAddress_text">Shipping Address</p>
+    <p class="firstName_text">First Name</p>
+    <p class="firstName_text1">{{mainProductIdData?.shiping_address?.firstName}}</p>
+    <p class="firstName_text">Address</p>
+    <p class="firstName_text1">{{mainProductIdData?.shiping_address?.address}}</p>
+    <p class="firstName_text">Pin Code</p>
+    <p class="firstName_text1">{{mainProductIdData?.shiping_address?.pinCode}}</p>
+    <p class="firstName_text">Phone Number</p>
+    <p class="firstName_text1">{{mainProductIdData?.shiping_address?.phoneNumber}}</p>
+    <p class="firstName_text">City</p>
+    <p class="firstName_text1">{{mainProductIdData?.shiping_address?.city}}</p>
+    <!-- <p class="firstName_text">Country</p>
+    <p class="firstName_text1">{{mainProductIdData?.shiping_address?.country}}</p> -->
+  </div>
+</ion-content>

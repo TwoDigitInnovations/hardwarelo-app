@@ -1,0 +1,149 @@
+<!-- <ion-header>
+  <div style="padding: 20px;">
+    <div class="mainHeader">
+      <div class="left" style="gap: 10px;">
+        <img class="hardwarelo_logo" src="../../../assets/images/hardware_lo_File_4-01.jpg" />
+        <img style="height:24px; width: 100%;" src="../../../assets/images/hardware_lo_File_4-02.jpg" />
+        <img style="height:24px; width: 24px;" src="../../../assets/images/hardware_lo_File_4-03.jpg" />
+        <img style="height:24px; width: 24px;" src="../../../assets/images/hardware_lo_File_4-04.jpg" />
+        <ion-icon class="location_icon" name="location-outline"></ion-icon>
+        <p class="number_text">{{userDetail?.pincode || pinCode}}</p>
+      </div>
+      <img *ngIf="!userDetail" class="user_icon" src="../../../assets/images/user.png" (click)="loginPage()" />
+      <div class="username_div" (click)="profilePage()" *ngIf="userDetail">
+        <p class="username_text">{{userDetail?.username?.charAt(0).toUpperCase()}}</p>
+      </div>
+    </div>
+  </div>
+</ion-header> -->
+
+<ion-header>
+  <ion-grid class="pad_0">
+    <ion-row>
+      <ion-col size="6" class="pad_0">
+        <img style="height:64px; width: 100%; object-fit: cover;"
+          src="../../../assets/images/hardware_lo_File_4-02.jpg" />
+      </ion-col>
+      <ion-col size="6" class="pad_0" style="display: flex; justify-content: flex-end; align-items: center;">
+        <div class="mainHeader">
+          <div class="left" style="gap: 10px;">
+            <ion-icon class="location_icon" name="location-outline"></ion-icon>
+            <p class="number_text">{{userDetail?.pincode || pinCode}}</p>
+          </div>
+          <img *ngIf="!userDetail" class="user_icon" src="../../../assets/images/user.png" (click)="loginPage()" />
+          <div class="username_div" (click)="profilePage()" *ngIf="userDetail">
+            <p class="username_text">{{userDetail?.username?.charAt(0).toUpperCase()}}</p>
+          </div>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <!-- <div class="mainHeader">
+      <div class="left" style="gap: 10px;">
+        <img style="height:24px; width: 100%;" src="../../../assets/images/hardware_lo_File_4-02.jpg" />
+        <ion-icon class="location_icon" name="location-outline"></ion-icon>
+        <p class="number_text">{{userDetail?.pincode || pinCode}}</p>
+      </div>
+      <img *ngIf="!userDetail" class="user_icon" src="../../../assets/images/user.png" (click)="loginPage()" />
+      <div class="username_div" (click)="profilePage()" *ngIf="userDetail">
+        <p class="username_text">{{userDetail?.username?.charAt(0).toUpperCase()}}</p>
+      </div>
+    </div> -->
+</ion-header>
+
+<ion-content class="mainBackground">
+  <div style="padding:20px 20px 0px 20px;">
+    <app-carousel-card></app-carousel-card>
+
+    <div class="w_100">
+      <div class="goToItems_div">
+        <p class="goToItems_text">Your Go-to Items</p>
+        <div class="seeAll_div" (click)="productViewPage()" *ngIf="productData.length >0">
+          <p class="seeAll_text">See All</p>
+          <ion-icon class="forwardOutline_text" name="chevron-forward-outline"></ion-icon>
+        </div>
+      </div>
+
+      <div class="mainGoToItemsCard" *ngIf="productData.length >0">
+        <app-product-card *ngFor="let item of productData" [item]="item"></app-product-card>
+      </div>
+    </div>
+
+    <div class="noProducts_div" *ngIf="productData.length === 0">
+      <p class="noProducts_text">No Products</p>
+    </div>
+
+    <!-- <div class="w_100">
+      <div class="goToItems_div">
+        <p class="goToItems_text">Explore By Categories</p>
+        <div class="seeAll_div" (click)="categoriesPage()">
+          <p class="seeAll_text">See All</p>
+          <ion-icon class="forwardOutline_text" name="chevron-forward-outline"></ion-icon>
+        </div>
+      </div>
+
+      <div class="d_flex" style="gap: 10px; width: 100%; overflow-y: auto; ">
+        <app-categories-card *ngFor="let item of categoryData" [item]="item"
+          (click)="gotoCategory(item)"></app-categories-card>
+      </div>
+    </div> -->
+
+    <div class="w_100">
+      <div class="goToItems_div">
+        <p class="goToItems_text">Explore By Super Categories</p>
+        <div class="seeAll_div" (click)="categoriesPage()">
+          <p class="seeAll_text">See All</p>
+          <ion-icon class="forwardOutline_text" name="chevron-forward-outline"></ion-icon>
+        </div>
+      </div>
+
+      <div class="d_flex" style="gap: 10px; width: 100%; overflow-y: auto; ">
+        <app-super-categories-card *ngFor="let item of superCategoryData" [item]="item"
+          (click)="categoriesCardPage(item)"></app-super-categories-card>
+      </div>
+    </div>
+
+    <div class="w_100" style="margin-top: 20px;">
+      <div class="goToItems_div">
+        <p class="goToItems_text">Explore By Brand</p>
+        <div class="seeAll_div" (click)="brandPage()">
+          <p class="seeAll_text">See All</p>
+          <ion-icon class="forwardOutline_text" name="chevron-forward-outline"></ion-icon>
+        </div>
+      </div>
+
+      <div class="brand_div">
+        <div style="width: 100% !important;" *ngFor="let item of brandData" (click)="brandListPage(item)">
+          <div class="brandCard center">
+            <img class="brand_img" [src]="item?.image" />
+            <p class="brandName_text center">{{item?.name}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="w_100">
+      <div class="goToItems_div" style="margin-top: 20px;">
+        <p class="goToItems_text">New Items</p>
+        <div class="seeAll_div" (click)="productViewPage()" *ngIf="productData.length >0">
+          <p class="seeAll_text">See All</p>
+          <ion-icon class="forwardOutline_text" name="chevron-forward-outline"></ion-icon>
+        </div>
+      </div>
+
+      <div class="mainGoToItemsCard" *ngIf="productData.length >0">
+        <app-product-card *ngFor="let item of productData" [item]="item"></app-product-card>
+      </div>
+    </div>
+
+    <div class="noProducts_div" *ngIf="productData.length === 0">
+      <p class="noProducts_text">No Products</p>
+    </div>
+
+  </div>
+  <div
+    style="color: white; background-color: #0D57FE;display: flex;justify-content: space-between; padding: 10px 10px;align-items: center;flex-direction: column;">
+    <p class="mar_0" style="font-weight: 700;font-size: 20px;">জয় আই অসম!</p>
+    <p class="mar_0">Made with ❤️ in Assam, India</p>
+  </div>
+</ion-content>

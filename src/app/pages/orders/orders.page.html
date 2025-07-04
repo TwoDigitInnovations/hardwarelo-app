@@ -1,0 +1,32 @@
+<ion-header>
+  <div class="mainHeader">
+    <div class="left" style="padding:20px 0px;">
+      <ion-icon class="back_icon" name="chevron-back-outline" (click)="goBack()"></ion-icon>
+      <p class="cart_text">Orders</p>
+    </div>
+  </div>
+</ion-header>
+
+<ion-content class="mainBackground">
+  <div style="padding:20px 20px 0px 20px;">
+
+    <div class="card" *ngFor="let item of ordersData" (click)="ordersDetails(item?._id, item?.productDetail?._id)">
+      <div style="display: flex;">
+        <!-- <img class="order_img" [src]="item?.productDetail?.image" /> -->
+        <div style="padding-left: 0px;">
+          <!-- <div style="display: flex; justify-content: space-between; align-items: start; gap: 10px;">
+            <p class="productName_text">{{item?.productDetail?.product?.name}}</p>
+            <p class="productName_text">₹{{item?.productDetail?.total}}</p>
+          </div> -->
+          <p class="orderId_text">Order ID: {{item?.orderId || item?._id}}</p>
+          <p class="quantity_text">Main Total: {{item?.main_total}}</p>
+          <p class="quantity_text">Total: {{item?.total}}</p>
+          <p class="quantity_text">Delivery Fee: {{item?.delivery_fee}}</p>
+          <p class="quantity_text">Quantity: {{item?.productDetail?.qty}}</p>
+          <p class="quantity_text">Payment Method: {{item?.payment_type}}</p>
+          <p class="quantity_text">Status: {{item?.status}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</ion-content>

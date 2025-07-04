@@ -1,0 +1,188 @@
+<ion-header>
+  <div class="mainHeader">
+    <div class="left" style="padding:20px 0px;">
+      <ion-icon class="back_icon" name="chevron-back-outline" (click)="goBack()"></ion-icon>
+      <p class="cart_text">Settings</p>
+    </div>
+  </div>
+</ion-header>
+
+<ion-content class="mainBackground">
+  <div style="padding:20px;">
+
+    <div class="card" *ngIf="userDetail">
+      <ion-grid class="pad_0">
+        <ion-row>
+          <ion-col size="3" class="pad_0 ">
+            <ion-avatar class="">
+              <div class="username_div">
+                <p class="username_text">{{userDetail?.username?.charAt(0).toUpperCase()}}</p>
+              </div>
+            </ion-avatar>
+          </ion-col>
+          <ion-col size="7" class="pad_0 userDetails_div">
+            <p class="welcome_text">Welcome</p>
+            <p class="name_text">{{userDetail?.username}}</p>
+            <p class="phoneNumber_text">{{userDetail?.number}}</p>
+          </ion-col>
+          <ion-col size="2" class="pad_0 center">
+            <ion-icon class="logOut_icon" (click)="isAlertOpen=true" name="log-out-outline"></ion-icon>
+            <!-- <img (click)="isAlertOpen=true" src="../../../assets/images/logout-icon.png" /> -->
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </div>
+
+    <div class="card-1" (click)="userProfilePage()" *ngIf="userDetail">
+      <ion-grid class="pad_0">
+        <ion-row>
+          <ion-col size="3" class="pad_0 center">
+            <ion-icon class="userCricle_img" name="person-circle"></ion-icon>
+          </ion-col>
+          <ion-col size="7" class="pad_0 mineUserProfile_div">
+            <p class="userProfile_text">User Profile</p>
+          </ion-col>
+          <ion-col size="2" class="pad_0 center">
+            <ion-icon class="forward_img" name="chevron-forward"></ion-icon>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </div>
+
+    <div class="card-1" (click)="ordersPage()" *ngIf="userDetail">
+      <ion-grid class="pad_0">
+        <ion-row>
+          <ion-col size="3" class="pad_0 center">
+            <ion-icon class="userCricle_img" name="bag-outline"></ion-icon>
+          </ion-col>
+          <ion-col size="7" class="pad_0 mineUserProfile_div">
+            <p class="userProfile_text">Orders</p>
+          </ion-col>
+          <ion-col size="2" class="pad_0 center">
+            <ion-icon class="forward_img" name="chevron-forward"></ion-icon>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </div>
+
+    <!-- <div class="card-1" (click)="queriesPage()" *ngIf="userDetail">
+      <ion-grid class="pad_0">
+        <ion-row>
+          <ion-col size="3" class="pad_0 center">
+            <ion-icon class="userCricle_img" name="bag-outline"></ion-icon>
+          </ion-col>
+          <ion-col size="7" class="pad_0 mineUserProfile_div">
+            <p class="userProfile_text">Queries</p>
+          </ion-col>
+          <ion-col size="2" class="pad_0 center">
+            <ion-icon class="forward_img" name="chevron-forward"></ion-icon>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </div> -->
+
+    <div class="card-1" (click)="couponPage()" *ngIf="userDetail">
+      <ion-grid class="pad_0">
+        <ion-row>
+          <ion-col size="3" class="pad_0 center">
+            <img class="userCricle_img" style="object-fit: contain;" src="../../../assets/images/coupon.png" />
+          </ion-col>
+          <ion-col size="7" class="pad_0 mineUserProfile_div">
+            <p class="userProfile_text">Coupon</p>
+          </ion-col>
+          <ion-col size="2" class="pad_0 center">
+            <ion-icon class="forward_img" name="chevron-forward"></ion-icon>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </div>
+
+    <div class="card-1" (click)="privacyPolicy()">
+      <ion-grid class="pad_0">
+        <ion-row>
+          <ion-col size="3" class="pad_0 center">
+            <ion-icon class="userCricle_img" name="reader-outline"></ion-icon>
+          </ion-col>
+          <ion-col size="7" class="pad_0 mineUserProfile_div">
+            <p class="userProfile_text">Privacy Policy</p>
+          </ion-col>
+          <ion-col size="2" class="pad_0 center">
+            <ion-icon class="forward_img" name="chevron-forward"></ion-icon>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </div>
+
+    <div class="card-1" (click)="termsAndConditionsPage()">
+      <ion-grid class="pad_0">
+        <ion-row>
+          <ion-col size="3" class="pad_0 center">
+            <ion-icon class="userCricle_img" name="receipt-outline"></ion-icon>
+          </ion-col>
+          <ion-col size="7" class="pad_0 mineUserProfile_div">
+            <p class="userProfile_text">Terms and Conditions</p>
+          </ion-col>
+          <ion-col size="2" class="pad_0 center">
+            <ion-icon class="forward_img" name="chevron-forward"></ion-icon>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </div>
+
+    <div class="card-1" (click)="isAlertOpen2=true" *ngIf="userDetail">
+      <ion-grid class="pad_0">
+        <ion-row>
+          <ion-col size="3" class="pad_0 center">
+            <ion-icon class="userCricle_img" name="trash-outline"></ion-icon>
+          </ion-col>
+          <ion-col size="7" class="pad_0 mineUserProfile_div">
+            <p class="userProfile_text">Delete Account</p>
+          </ion-col>
+          <ion-col size="2" class="pad_0 center">
+            <ion-icon class="forward_img" name="chevron-forward"></ion-icon>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </div>
+
+    <ion-modal [isOpen]="isAlertOpen" (didDismiss)="isAlertOpen=false" cssClass="calendar1">
+      <ng-template>
+        <ion-content class="ion-padding content" style="--background: white !important;">
+          <div class="h_100 w_100 center flex_col" style="position: relative;">
+            <!-- <img style="position: absolute; top: 0px; right: 0px;" (click)="isAlertOpen=false"
+              src="../../../assets/images/basil_cross-solid.png" /> -->
+            <ion-icon style="position: absolute; top: 0px; right: 0px; height: 30px; width: 30px;  color: #001F8D;"
+              (click)="isAlertOpen=false" name="close"></ion-icon>
+            <p class="logout_text">Do you want to Log out?</p>
+
+            <div class="w_100 center" style="gap: 20px;">
+              <ion-button class="signIn_btn" (click)="logout()">Yes</ion-button>
+              <ion-button class="signIn_btn-1" (click)="isAlertOpen=false">No</ion-button>
+            </div>
+          </div>
+        </ion-content>
+      </ng-template>
+    </ion-modal>
+
+    <ion-modal [isOpen]="isAlertOpen2" (didDismiss)="isAlertOpen2=false" cssClass="calendar1">
+      <ng-template>
+        <ion-content class="ion-padding content" style="--background: white !important;">
+          <div class="h_100 w_100 center flex_col" style="position: relative;">
+            <!-- <img style="position: absolute; top: 0px; right: 0px;" (click)="isAlertOpen2=false"
+              src="../../../assets/images/basil_cross-solid.png" /> -->
+            <ion-icon style="position: absolute; top: 0px; right: 0px; height: 30px; width: 30px;  color: #001F8D;"
+              (click)="isAlertOpen2=false" name="close"></ion-icon>
+            <p class="logout_text" style="text-align: center;">Do you want to delete your account
+              permanently?</p>
+
+            <div class="w_100 center" style="gap: 20px;">
+              <ion-button class="signIn_btn" (click)="logout()">Yes</ion-button>
+              <ion-button class="signIn_btn-1" (click)="isAlertOpen2=false">No</ion-button>
+            </div>
+          </div>
+        </ion-content>
+      </ng-template>
+    </ion-modal>
+
+  </div>
+</ion-content>

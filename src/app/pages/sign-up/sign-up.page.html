@@ -1,0 +1,64 @@
+<!-- <ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>sign-up</ion-title>
+  </ion-toolbar>
+</ion-header> -->
+
+<ion-content class="mainBackground">
+  <div style="padding: 10px 0px 0px 10px;">
+    <ion-icon class="back" (click)="goBack()" name="arrow-back-circle-outline"></ion-icon>
+  </div>
+  <div class="center flex_col w_100 h_100" style="padding:20px;">
+    <div class="center d_flex flex_col">
+      <img style="width: 212px; height: 35px; margin-bottom: 5px;" src="../../../assets/images/logo.png" />
+      <p class="login_text">Sign up</p>
+    </div>
+
+    <form class="w_100" #signUpForm="ngForm">
+      <ion-input class="fullName_text" type="text" placeholder="Full Name" name="fullName" [readonly]="otpShow"
+        [(ngModel)]="signUpModel.fullName" #fullName="ngModel" required></ion-input>
+      <p class="validField" *ngIf="submitted && fullName?.errors?.['required']">
+        Full Name is required.
+      </p>
+
+      <ion-input class="phoneNumber_text" inputmode="numeric" placeholder="Phone Number" [readonly]="otpShow"
+        name="phoneNumber" [(ngModel)]="signUpModel.phoneNumber" #phoneNumber="ngModel" required></ion-input>
+      <p class="validField" *ngIf="submitted && phoneNumber?.errors?.['required']">
+        Phone Number is required.
+      </p>
+      <!-- inputmode="numeric" type="text" maxlength="10" minlength="10" -->
+      <!-- <p class="validField" *ngIf="submitted && phoneNumber?.errors?.['minlength']">
+        Invalid mobile number
+      </p> -->
+      <ion-input class="institution_text" type="number" placeholder="Pin Code" [readonly]="otpShow" name="pinCode"
+        [(ngModel)]="signUpModel.pinCode" #pinCode="ngModel" required></ion-input>
+      <p class="validField" *ngIf="submitted && pinCode?.errors?.['required']">
+        Pin Code is required.
+      </p>
+      <ion-input class="email" pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" type="text" placeholder="Email"
+        name="email" [readonly]="otpShow" [(ngModel)]="signUpModel.email" #email="ngModel" required></ion-input>
+      <p class="validField" *ngIf="submitted && email?.errors?.['required']">
+        Email is required.
+      </p>
+      <p class="validField" *ngIf="submitted && email?.errors?.['pattern']">
+        Invalid your email
+      </p>
+      <ion-input class="password" type="password" placeholder="Password" name="password"
+        [(ngModel)]="signUpModel.password" #password="ngModel" required [readonly]="otpShow"></ion-input>
+      <p class="validField" *ngIf="submitted && password?.errors?.['required']">
+        Password is required.
+      </p>
+      <div *ngIf="otpShow">
+        <ion-input class="password" type="text" placeholder="OTP" name="otp" [(ngModel)]="signUpModel.otp"
+          #otp="ngModel" [required]="otpShow"></ion-input>
+        <p class="validField" *ngIf="submitted && otp?.errors?.['required']">
+          OTP is required.
+        </p>
+      </div>
+      <ion-button class="signIn_btn" (click)="validationForm(signUpForm)">Sign up</ion-button>
+    </form>
+    <div class="center">
+      <p class="signup_text">Have any account? <span class="signup_text-1" (click)="signInPage()">Signin</span></p>
+    </div>
+  </div>
+</ion-content>

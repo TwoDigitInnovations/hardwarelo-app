@@ -1,0 +1,6 @@
+<swiper-container [modules]="swiperModules" [options]="options" pagination="true" autoplay="true" centered-slides="true"
+  autoplay-delay="2500" autoplay-disable-on-interaction="false" spacebetween="10">
+  <swiper-slide *ngFor="let item of settingData">
+    <img class="w_100" style="margin-bottom: 20px;" [src]="item" />
+  </swiper-slide>
+</swiper-container>

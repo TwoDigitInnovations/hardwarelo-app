@@ -1,0 +1,37 @@
+<!-- <ion-header>
+  <ion-toolbar>
+    <ion-title>sign-in</ion-title>
+  </ion-toolbar>
+</ion-header> -->
+
+<ion-content class="mainBackground">
+  <div style="padding: 10px 0px 0px 10px;">
+    <ion-icon class="back" (click)="goBack()" name="arrow-back-circle-outline"></ion-icon>
+  </div>
+  <div class="center flex_col w_100 h_100" style="padding:20px;">
+    <div class="center d_flex flex_col">
+      <img style="width: 212px; height: 35px; margin-bottom: 5px;" src="../../../assets/images/logo.png" />
+      <p class="login_text">Log in</p>
+    </div>
+    <form class="w_100" #signinForm="ngForm">
+      <!-- pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" -->
+      <ion-input class="email" type="number" placeholder="Phone Number" name="email" [(ngModel)]="signinModel.email"
+        #email="ngModel" required></ion-input>
+      <p class="validField" *ngIf="submitted && email?.errors?.['required']">
+        Phone Number is required.
+      </p>
+      <!-- <p class="validField" *ngIf="submitted && email?.errors?.['pattern']">
+        Invalid your email
+      </p> -->
+      <ion-input class="password" type="password" placeholder="Password" name="password"
+        [(ngModel)]="signinModel.password" #password="ngModel" required></ion-input>
+      <p class="validField" *ngIf="submitted && password?.errors?.['required']">
+        Password is required.
+      </p>
+      <p class="forgetPassword" (click)="forgetPasswordPage()">Forget Password ?</p>
+      <ion-button class="signIn_btn" (click)="login(signinForm)">Sign in</ion-button>
+    </form>
+
+    <p class="signup_text">Don’t have any account? <span class="signup_text-1" (click)="signUpPage()">Signup</span></p>
+  </div>
+</ion-content>

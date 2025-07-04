@@ -1,0 +1,46 @@
+<ion-header>
+  <div style="padding: 20px;">
+    <div class="mainHeader">
+      <div class="left" style="gap: 10px;">
+        <ion-icon class="back_icon" name="chevron-back-outline" (click)="goBack()"></ion-icon>
+        <ion-icon class="location_icon" name="location-outline"></ion-icon>
+        <p class="number_text">{{userDetail?.pincode || pinCode}}</p>
+      </div>
+      <img *ngIf="!userDetail" class="user_icon" src="../../../assets/images/user.png" (click)="loginPage()" />
+      <div class="username_div" (click)="profilePage()" *ngIf="userDetail">
+        <p class="username_text">{{userDetail?.username?.charAt(0).toUpperCase()}}</p>
+      </div>
+    </div>
+    <ion-searchbar class="searchbar_text" name="search" [(ngModel)]="serchData"
+      (keyup.enter)="getProductByCatrgoryId()"></ion-searchbar>
+  </div>
+</ion-header>
+
+<ion-content class="mainBackground">
+  <div style="padding: 10px 5px;">
+    <swiper-container [modules]="swiperModules" [options]="options" pagination="true" autoplay="true"
+      centered-slides="true" autoplay-delay="2500" autoplay-disable-on-interaction="false" spacebetween="10">
+      <swiper-slide *ngFor="let item of bannerList">
+        <img class="w_100" style="margin-bottom: 20px;" [src]="item" />
+      </swiper-slide>
+    </swiper-container>
+
+    <div class="w_100">
+      <div class="goToItems_div">
+        <p class="goToItems_text">{{categoriesId}}</p>
+      </div>
+
+      <ion-grid>
+        <ion-row>
+          <ion-col size="6" *ngFor="let items of productData">
+            <app-product-card [item]="items" width="100%"></app-product-card>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+
+      <div class="noProducts_div" *ngIf="productData.length === 0">
+        <p class="noProducts_text">No Products</p>
+      </div>
+    </div>
+  </div>
+</ion-content>

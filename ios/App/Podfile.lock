@@ -1,0 +1,77 @@
+PODS:
+  - Capacitor (7.4.0):
+    - CapacitorCordova
+  - CapacitorApp (7.0.1):
+    - Capacitor
+  - CapacitorCamera (7.0.1):
+    - Capacitor
+  - CapacitorClipboard (7.0.1):
+    - Capacitor
+  - CapacitorCordova (7.4.0)
+  - CapacitorHaptics (7.0.1):
+    - Capacitor
+  - CapacitorKeyboard (7.0.1):
+    - Capacitor
+  - CapacitorPluginSafeArea (4.0.0):
+    - Capacitor
+  - CapacitorRazorpay (1.2.0):
+    - Capacitor
+    - razorpay-pod
+  - CapacitorStatusBar (7.0.1):
+    - Capacitor
+  - razorpay-pod (1.4.2)
+
+DEPENDENCIES:
+  - "Capacitor (from `../../node_modules/@capacitor/ios`)"
+  - "CapacitorApp (from `../../node_modules/@capacitor/app`)"
+  - "CapacitorCamera (from `../../node_modules/@capacitor/camera`)"
+  - "CapacitorClipboard (from `../../node_modules/@capacitor/clipboard`)"
+  - "CapacitorCordova (from `../../node_modules/@capacitor/ios`)"
+  - "CapacitorHaptics (from `../../node_modules/@capacitor/haptics`)"
+  - "CapacitorKeyboard (from `../../node_modules/@capacitor/keyboard`)"
+  - CapacitorPluginSafeArea (from `../../node_modules/capacitor-plugin-safe-area`)
+  - CapacitorRazorpay (from `../../node_modules/capacitor-razorpay`)
+  - "CapacitorStatusBar (from `../../node_modules/@capacitor/status-bar`)"
+
+SPEC REPOS:
+  trunk:
+    - razorpay-pod
+
+EXTERNAL SOURCES:
+  Capacitor:
+    :path: "../../node_modules/@capacitor/ios"
+  CapacitorApp:
+    :path: "../../node_modules/@capacitor/app"
+  CapacitorCamera:
+    :path: "../../node_modules/@capacitor/camera"
+  CapacitorClipboard:
+    :path: "../../node_modules/@capacitor/clipboard"
+  CapacitorCordova:
+    :path: "../../node_modules/@capacitor/ios"
+  CapacitorHaptics:
+    :path: "../../node_modules/@capacitor/haptics"
+  CapacitorKeyboard:
+    :path: "../../node_modules/@capacitor/keyboard"
+  CapacitorPluginSafeArea:
+    :path: "../../node_modules/capacitor-plugin-safe-area"
+  CapacitorRazorpay:
+    :path: "../../node_modules/capacitor-razorpay"
+  CapacitorStatusBar:
+    :path: "../../node_modules/@capacitor/status-bar"
+
+SPEC CHECKSUMS:
+  Capacitor: 10feab36396883c55373328124a677f118cd4b5f
+  CapacitorApp: febecbb9582cb353aed037e18ec765141f880fe9
+  CapacitorCamera: 6e73f1fc6c629a672658705a02409b60854bc0f1
+  CapacitorClipboard: 70bfdb42b877b320a6e511ab94fa7a6a55d57ecb
+  CapacitorCordova: 723e017d8a80ab2ede9959fbe37556c35ac860d5
+  CapacitorHaptics: 1f1e17041f435d8ead9ff2a34edd592c6aa6a8d6
+  CapacitorKeyboard: 09fd91dcde4f8a37313e7f11bde553ad1ed52036
+  CapacitorPluginSafeArea: 22031c3436269ca80fac90ec2c94bc7c1e59a81d
+  CapacitorRazorpay: 14e950b756da4e21df43ef89c78a3a62b5e5df68
+  CapacitorStatusBar: 6e7af040d8fc4dd655999819625cae9c2d74c36f
+  razorpay-pod: 77bdd9733b6ea81c9fbbd6b75fea6a09feab284e
+
+PODFILE CHECKSUM: b630acb0a97b280af77d43a989361cfd50fcc27f
+
+COCOAPODS: 1.16.2

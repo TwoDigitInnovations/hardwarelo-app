@@ -1,0 +1,161 @@
+ion-header {
+    background: #0D57FE;
+    padding-top: var(--safe-area-inset-top) !important;
+}
+
+.header-md {
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+}
+
+.mainHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0px 20px;
+}
+
+.back_icon {
+    height: 25px;
+    width: 25px;
+    color: white;
+}
+
+.cart_text {
+    font-size: 20px;
+    font-weight: 500;
+    color: white;
+    margin: 0px;
+    padding-left: 10px;
+}
+
+.emptyCart_btn {
+    height: 42px;
+    // width: 128px;
+    border: 2px solid white;
+    border-radius: 12px;
+    --background: transparent;
+    font-size: 16px;
+    font-weight: 500;
+    color: white;
+    text-transform: capitalize;
+    margin: 0px;
+}
+
+.mainBackground {
+    --background: #ECF0FA;
+    height: 100%;
+    width: 100%;
+}
+
+.fullName_text {
+    width: 100%;
+    padding: 0px 10px 0px 20px !important;
+    height: 52px;
+    border-radius: 14px;
+    background: linear-gradient(104deg, rgba(255, 255, 255, 0.70) -4%, #FFF 111.16%);
+    border: 2px solid #0D34BF;
+    color: #0D34BF;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: 10px 0px 0px 0px;
+}
+
+.phoneNumber_text {
+    width: 100%;
+    padding: 0px 10px 0px 20px !important;
+    height: 52px;
+    border-radius: 14px;
+    background: linear-gradient(104deg, rgba(255, 255, 255, 0.70) -4%, #FFF 111.16%);
+    border: 2px solid #0D34BF;
+    color: #0D34BF;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: 10px 0px 0px 0px;
+}
+
+.institution_text {
+    width: 100%;
+    padding: 0px 10px 0px 20px !important;
+    height: 52px;
+    border-radius: 14px;
+    background: linear-gradient(104deg, rgba(255, 255, 255, 0.70) -4%, #FFF 111.16%);
+    border: 2px solid #0D34BF;
+    color: #0D34BF;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: 10px 0px 0px 0px;
+}
+
+.email {
+    width: 100%;
+    padding: 0px 10px 0px 20px !important;
+    height: 52px;
+    border-radius: 14px;
+    background: linear-gradient(104deg, rgba(255, 255, 255, 0.70) -4%, #FFF 111.16%);
+    border: 2px solid #0D34BF;
+    color: #0D34BF;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: 10px 0px 0px 0px;
+}
+
+.signIn_btn {
+    --border-radius: 14px;
+    --background: #0D34BF;
+    color: #FFF;
+    text-align: center;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    width: 100%;
+    margin: 0px;
+    padding-top: 50px;
+    height: 100px;
+    text-transform: none;
+}
+
+.editIconBg {
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    border-radius: 100%;
+    background: #001F8D;
+    bottom: 5px;
+    right: 105px;
+}
+
+.editIcon {
+    height: 20px;
+    width: 20px;
+}
+
+.logOut_div {
+    height: 42px;
+    width: 42px;
+    border: 2px solid white;
+    border-radius: 12px;
+}
+
+.logOut_icon {
+    height: 30px;
+    width: 30px;
+    object-fit: contain;
+    color: white;
+}
+
+.edit_icon {
+    height: 20px;
+    width: 20px;
+    object-fit: contain;
+}

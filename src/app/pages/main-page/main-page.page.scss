@@ -1,0 +1,45 @@
+.mainBackground {
+    // --background: linear-gradient(74.24deg, #0D34BF 0%, #7493FF 100%);
+    --background: white;
+    height: 100%;
+    width: 100%;
+}
+
+.signIn_btn {
+    --border-radius: 14px;
+    --background: #0D34BF;
+    color: #FFF;
+    text-align: center;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    width: 100%;
+    margin: 25px 0px 0px 0px;
+    height: 50px;
+    text-transform: none;
+}
+
+.modalClose_icon {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    height: 30px;
+    width: 30px;
+    color: #001F8D;
+}
+
+.pinCode_text {
+    width: 100%;
+    padding: 0px 10px 0px 20px !important;
+    height: 52px;
+    border-radius: 14px;
+    background: linear-gradient(104deg, rgba(255, 255, 255, 0.70) -4%, #FFF 111.16%);
+    border: 2px solid #0D34BF;
+    color: #0D34BF;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: 10px 0px 0px 0px;
+}

@@ -1,0 +1,318 @@
+ion-header {
+    background: #0D57FE;
+    padding-top: var(--safe-area-inset-top) !important;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    box-shadow: 0px 3px 8px 0px #0000001F !important;
+    min-height: 64px;
+}
+
+// .header-md {
+//     -webkit-box-shadow: none !important;
+//     box-shadow: none !important;
+// }
+
+.mainHeader {
+    // display: flex;
+    // justify-content: space-between;
+    // align-items: center;
+    width: 100%;
+    padding: 10px 20px;
+}
+
+.back_icon {
+    height: 25px;
+    width: 25px;
+    // color: #35035C;
+    color: white;
+}
+
+.search_icon {
+    height: 25px;
+    width: 25px;
+    color: #665E6C;
+}
+
+.location_icon {
+    height: 25px;
+    width: 25px;
+    color: linear-gradient(180deg, #0026AD 0%, #001F8D 100%);
+}
+
+.checkOut_text {
+    font-size: 15px;
+    font-weight: 500;
+    color: black;
+    margin: 0px;
+    padding-left: 5px;
+}
+
+.down_icon {
+    height: 25px;
+    width: 25px;
+    color: linear-gradient(180deg, #0026AD 0%, #001F8D 100%);
+    padding-left: 5px;
+}
+
+.mainBackground {
+    --background: white;
+    height: 100%;
+    width: 100%;
+}
+
+.cement_text {
+    font-size: 20px;
+    font-weight: 600;
+    color: black;
+    margin: 0px;
+}
+
+.mainCementDiv {
+    margin-top: 20px;
+}
+
+.card {
+    // background: #BECCEE;
+    background: white;
+    border: 1px solid #E2D6DA;
+    border-radius: 8px;
+    padding: 20px;
+    width: 150px !important;
+    position: relative;
+}
+
+.card1 {
+    background: #BECCEE;
+    // background: white;
+    border: 1px solid #E2D6DA;
+    border-radius: 8px;
+    padding: 20px;
+    width: 150px !important;
+    position: relative;
+}
+
+.kg_text {
+    font-size: 14px;
+    font-weight: 400;
+    color: black;
+    margin: 0px;
+    width: 120px !important;
+}
+
+.kg_text-1 {
+    font-size: 16px;
+    font-weight: 500;
+    color: black;
+    margin: 0px;
+    padding-top: 10px;
+}
+
+.gms_text {
+    font-size: 14px;
+    font-weight: 500;
+    color: #0D34BF;
+    margin: 0px;
+    padding-top: 10px;
+}
+
+.mainCardDiv {
+    display: flex;
+    // justify-content: center;
+    // align-items: center;
+    gap: 20px;
+    margin-top: 20px;
+    width: 100%;
+    overflow-y: auto;
+}
+
+.offer_img {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: -10px;
+    right: -10px;
+}
+
+.mainOffDiv {
+    display: flex;
+    // justify-content: space-between;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.off_text {
+    font-size: 18px;
+    font-weight: 400;
+    color: #0D34BF;
+    margin: 0px;
+}
+
+.qty_text {
+    font-size: 18px;
+    font-weight: 400;
+    color: #0D34BF;
+    margin: 10px 0px 0px 0px;
+}
+
+.off_text-1 {
+    font-size: 16px;
+    font-weight: 400;
+    color: #87848A;
+    margin: 0px;
+    padding-left: 10px;
+}
+
+.off_text-2 {
+    font-size: 16px;
+    font-weight: 500;
+    color: #4B73FF;
+    margin: 0px;
+    padding-left: 10px;
+}
+
+.add_btn {
+    --background: #0D34BF;
+    width: 80px;
+    height: 32px;
+    --border-radius: 8px;
+    font-size: 20px;
+    font-weight: 500;
+    color: white;
+    margin: 0px;
+}
+
+.productInformationDiv {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.productInformation_text {
+    font-size: 18px;
+    font-weight: 500;
+    color: black;
+    margin: 0px;
+}
+
+.expiryDate_btn {
+    --background: #ECF0FA;
+    height: 44px;
+    width: 110px;
+    --border-radius: 8px;
+    font-size: 12px;
+    font-weight: 500;
+    color: black;
+    margin: 0px;
+    --box-shadow: none !important;
+}
+
+.expiryDate_btn-1 {
+    font-size: 14px;
+    font-weight: 500;
+    color: #2F2699;
+    margin: 0px;
+}
+
+.mainProductInformationDiv {
+    margin-top: 20px;
+    // margin-bottom: 20px;
+}
+
+.countryOfOrigin_text {
+    font-size: 14px;
+    font-weight: 500;
+    color: black;
+    margin: 0px;
+    padding-top: 10px;
+}
+
+.india_text {
+    font-size: 14px;
+    font-weight: 400;
+    color: #87848A;
+    margin: 0px;
+    padding-top: 5px;
+}
+
+.frequentlyBoughtTogether_card {
+    background: #ECF0FA;
+}
+
+.frequentlyBoughtTogether_text {
+    font-size: 18px;
+    font-weight: 600;
+    color: black;
+    margin: 0px;
+}
+
+.cart_text {
+    font-size: 20px;
+    font-weight: 500;
+    color: white;
+    // color: #35035C;
+    margin: 0px;
+    padding-left: 10px;
+}
+
+.offer_text {
+    position: absolute;
+    top: 6px;
+    right: 5px;
+    color: white;
+    font-size: 10px;
+    font-weight: 400;
+    margin: 0px;
+}
+
+.color_dot {
+    width: 20px;
+    height: 20px;
+    background: black;
+    border-radius: 100%;
+    margin: 20px 0px 0px 0px;
+    border: 1px solid black;
+}
+
+.color_dot1 {
+    width: 20px;
+    height: 20px;
+    background: black;
+    border-radius: 100%;
+    margin: 20px 0px 0px 0px;
+    // border: 1px solid black;
+}
+
+.brandName_text {
+    font-size: 20px;
+    font-weight: 600;
+    // font-size: 18px;
+    // font-weight: 400;
+    color: black;
+    margin: 20px 0px 0px 0px;
+}
+
+.shippingAddress_text {
+    font-size: 20px;
+    font-weight: 700;
+    color: black;
+    margin: 20px 0px 0px 0px;
+    padding-bottom: 10px;
+}
+
+.firstName_text {
+    font-size: 16px;
+    font-weight: 700;
+    color: black;
+    margin: 10px 0px 0px 0px;
+}
+
+.firstName_text1 {
+    font-size: 16px;
+    font-weight: 400;
+    color: black;
+    margin: 10px 0px 0px 0px;
+}

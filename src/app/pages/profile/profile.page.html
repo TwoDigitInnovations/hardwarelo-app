@@ -1,0 +1,61 @@
+<ion-header>
+  <div class="mainHeader">
+    <div class="left" style="padding:20px 0px;">
+      <ion-icon class="back_icon" name="chevron-back-outline" (click)="goBack()"></ion-icon>
+      <p class="cart_text">Profile</p>
+    </div>
+    <div class="center">
+      <div *ngIf="!isEdit" class="center logOut_div">
+        <img class="edit_icon" (click)="isEdit= true" src="../../../assets/images/edit-icon.png" />
+      </div>
+    </div>
+  </div>
+</ion-header>
+
+<ion-content class="mainBackground">
+  <div style="padding:20px;">
+    <div class="center" style="position: relative;">
+      <ion-avatar style="height: 150px; width: 150px;">
+        <img style="height: 150px; width: 150px;" src="{{imagesSource}}" />
+        <div class="center editIconBg" *ngIf="isEdit" (click)="takePicture()">
+          <img class="editIcon" src="../../../assets/images/edit-icon.png" />
+        </div>
+      </ion-avatar>
+    </div>
+
+    <form class="w_100" #profileForm="ngForm">
+      <ion-input [readonly]="!isEdit" class="fullName_text" type="text" placeholder="Full Name" name="fullName"
+        [(ngModel)]="profileModel.fullName" #fullName="ngModel" required></ion-input>
+      <p class="validField" *ngIf="submitted && fullName?.errors?.['required']">
+        Full Name is required.
+      </p>
+
+      <ion-input [readonly]="!isEdit" class="phoneNumber_text" inputmode="numeric" placeholder="Phone number"
+        name="phoneNumber" [(ngModel)]="profileModel.phoneNumber" #phoneNumber="ngModel" required></ion-input>
+      <p class="validField" *ngIf="submitted && phoneNumber?.errors?.['required']">
+        Phone number is required.
+      </p>
+      <!-- inputmode="numeric" type="text" maxlength="10" minlength="10" -->
+      <!-- <p class="validField" *ngIf="submitted && phoneNumber?.errors?.['minlength']">
+      Invalid mobile number
+    </p> -->
+      <ion-input [readonly]="!isEdit" class="institution_text" type="number" placeholder="Pin Code" name="pinCode"
+        [(ngModel)]="profileModel.pinCode" #pinCode="ngModel" required></ion-input>
+      <p class="validField" *ngIf="submitted && pinCode?.errors?.['required']">
+        Pin Code is required.
+      </p>
+      <ion-input [readonly]="!isEdit" class="email" pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" type="text"
+        placeholder="Email" name="email" [(ngModel)]="profileModel.email" #email="ngModel" required></ion-input>
+      <p class="validField" *ngIf="submitted && email?.errors?.['required']">
+        Email is required.
+      </p>
+      <p class="validField" *ngIf="submitted && email?.errors?.['pattern']">
+        Invalid your email
+      </p>
+
+      <ion-button *ngIf="isEdit" class="signIn_btn" (click)="updateProfile(profileForm)">Update</ion-button>
+    </form>
+
+  </div>
+
+</ion-content>

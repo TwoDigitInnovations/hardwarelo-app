@@ -1,0 +1,55 @@
+<ion-header>
+  <div class="mainHeader">
+    <div class="left" style="padding:20px 0px;">
+      <ion-icon class="back_icon" name="chevron-back-outline" (click)="goBack()"></ion-icon>
+      <p class="cart_text">Shipping Address</p>
+    </div>
+  </div>
+</ion-header>
+
+<ion-content class="mainBackground">
+  <div style="padding:20px;">
+
+    <form class="w_100" #shippingAddressForm="ngForm">
+      <ion-input class="firstName_text" type="text" placeholder="First Name" name="firstName"
+        [(ngModel)]="shippingAddressModel.firstName" #firstName="ngModel" required></ion-input>
+      <p class="validField" *ngIf="submitted && firstName?.errors?.['required']">
+        First Name is required.
+      </p>
+
+      <ion-input class="address_text" type="text" placeholder="Address" name="address"
+        [(ngModel)]="shippingAddressModel.address" #address="ngModel" required></ion-input>
+      <!-- inputmode="numeric" -->
+      <p class="validField" *ngIf="submitted && address?.errors?.['required']">
+        Address is required.
+      </p>
+
+      <ion-input class="pinCode_text" type="number" placeholder="Pin Code" name="pinCode"
+        [(ngModel)]="shippingAddressModel.pinCode" #pinCode="ngModel" required></ion-input>
+      <p class="validField" *ngIf="submitted && pinCode?.errors?.['required']">
+        Pin Code is required.
+      </p>
+
+      <ion-input class="phoneNumber_text" type="number" placeholder="Phone number" name="phoneNumber"
+        [(ngModel)]="shippingAddressModel.phoneNumber" #phoneNumber="ngModel" required></ion-input>
+      <p class="validField" *ngIf="submitted && phoneNumber?.errors?.['required']">
+        Phone Number is required.
+      </p>
+
+      <ion-input class="city_text" type="text" placeholder="City" name="city" [(ngModel)]="shippingAddressModel.city"
+        #city="ngModel" required></ion-input>
+      <p class="validField" *ngIf="submitted && city?.errors?.['required']">
+        City is required.
+      </p>
+
+      <ion-input class="country_text" type="text" placeholder="Country" name="country"
+        [(ngModel)]="shippingAddressModel.country" #country="ngModel" required></ion-input>
+      <p class="validField" *ngIf="submitted && country?.errors?.['required']">
+        Country is required.
+      </p>
+
+      <ion-button class="signIn_btn" (click)="createProductRquest(shippingAddressForm)">Place Order</ion-button>
+    </form>
+
+  </div>
+</ion-content>

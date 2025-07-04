@@ -1,0 +1,78 @@
+ion-header {
+    background: #0D57FE;
+    padding-top: var(--safe-area-inset-top) !important;
+}
+
+.header-md {
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+}
+
+.mainHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0px 20px;
+}
+
+.back_icon {
+    height: 25px;
+    width: 25px;
+    color: white;
+}
+
+.cart_text {
+    font-size: 20px;
+    font-weight: 500;
+    color: white;
+    margin: 0px;
+    padding-left: 10px;
+}
+
+.mainBackground {
+    --background: #ECF0FA;
+    height: 100%;
+    width: 100%;
+}
+
+.card {
+    width: 100%;
+    border-radius: 15px;
+    background: white;
+    padding: 10px;
+    box-shadow: 0px 0px 8px 0px #00000029;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.order_img {
+    height: 50px;
+    width: 50px;
+    border-radius: 10px;
+    object-fit: contain;
+}
+
+.productName_text {
+    color: black;
+    font-size: 16px;
+    font-weight: 700;
+    margin: 0px;
+}
+
+.orderId_text {
+    // color: #9CA3AF;
+    color: black;
+    font-size: 16px;
+    font-weight: 700;
+    margin: 0px;
+    // padding-top: 6px;
+}
+
+.quantity_text {
+    color: #9CA3AF;
+    font-size: 14px;
+    font-weight: 700;
+    margin: 0px;
+    padding-top: 6px;
+}

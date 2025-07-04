@@ -1,0 +1,758 @@
+ion-header {
+    background: #0D57FE;
+    padding-top: var(--safe-area-inset-top) !important;
+}
+
+.header-md {
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+}
+
+.mainHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0px 20px;
+}
+
+.cart_text {
+    font-size: 20px;
+    font-weight: 500;
+    color: white;
+    margin: 0px;
+}
+
+.back_icon {
+    height: 25px;
+    width: 25px;
+    color: white;
+}
+
+.emptyCart_btn {
+    // height: 42px;
+    width: 150px;
+    border: 2px solid white;
+    border-radius: 12px;
+    --background: transparent;
+    font-size: 16px;
+    font-weight: 500;
+    color: white;
+    text-transform: capitalize;
+    margin: 0px;
+}
+
+.orderDiv {
+    background: #D8F5E3;
+    height: 32px;
+    box-shadow: 0px 3px 6px 0px #0000001F;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.order_text {
+    font-size: 14px;
+    color: black;
+    margin: 0px;
+}
+
+
+.mainBackground {
+    --background: #ECF0FA;
+    height: 100%;
+    width: 100%;
+}
+
+.orderCard {
+    background: #FFFFFF;
+    width: 100%;
+    padding: 0px 20px 0px 20px;
+}
+
+.tataSalt_img {
+    width: 56px;
+    height: 56px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.tataSalt_text {
+    font-size: 14px;
+    font-weight: 500;
+    color: black;
+    margin: 0px;
+}
+
+.tataSalt_rs {
+    font-size: 16px;
+    font-weight: 600;
+    color: black;
+    margin: 0px;
+    padding-top: 5px;
+}
+
+.tataSalt_rs1 {
+    font-size: 14px;
+    font-weight: 400;
+    color: #0D34BF;
+    margin: 0px;
+}
+
+.tataSaltDiv {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.tataSalt_btn {
+    height: 32px;
+    --border-radius: 8px;
+    --background: #F3F3F3;
+    --box-shadow: none;
+    margin: 10px 0px 0px 0px;
+    font-size: 14px;
+    font-weight: 400;
+    color: #6B6B6B;
+    text-transform: capitalize;
+}
+
+.down_icon {
+    height: 20px;
+    width: 20px;
+    color: #0D34BF;
+    padding-left: 5px;
+}
+
+.close_icon {
+    height: 20px;
+    width: 20px;
+    color: #87848A;
+    position: absolute;
+    right: -5px;
+    top: 5px;
+    z-index: 9999;
+}
+
+.remove_div {
+    width: 32px;
+    height: 32px;
+    border-radius: 8px 0px 0px 8px;
+    background: #0D34BF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.remove_icon {
+    width: 16px;
+    height: 16px;
+    color: white;
+}
+
+.add_div {
+    width: 32px;
+    height: 32px;
+    border-radius: 0px 8px 8px 0px;
+    background: #0D34BF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mainCloseDiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.input_text {
+    width: 32px;
+    height: 32px;
+    background: #F3F3F3;
+    outline: none;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+}
+
+.availOffersCard {
+    background: #FFFFFF;
+    width: 100%;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    // align-items: center;
+    align-items: start;
+    padding: 20px;
+    box-shadow: 0px 0px 12px 0px #0000001F;
+}
+
+.availOffers_text {
+    font-size: 16px;
+    font-weight: 400;
+    color: black;
+    margin: 0px;
+}
+
+.availOffers_img {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+}
+
+.mainAvailOffers {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    gap: 10px;
+}
+
+.forward_icon {
+    width: 25px;
+    height: 25px;
+    color: #0D34BF;
+}
+
+.couponCode_div {
+    width: 100%;
+    margin-top: 20px;
+    border: 2px solid #0D34BF;
+    border-radius: 14px;
+    background: linear-gradient(104deg, rgba(255, 255, 255, 0.70) -4%, #FFF 111.16%);
+    display: flex;
+}
+
+.couponCode_text {
+    width: 100%;
+    padding: 0px 10px 0px 20px !important;
+    height: 50px;
+    color: #0D34BF;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: 0px;
+}
+
+.apply_btn {
+    --border-radius: 12px;
+    --background: #0D34BF;
+    color: #FFF;
+    text-align: center;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    width: 100px;
+    margin: 0px;
+    height: 50px;
+    text-transform: none;
+}
+
+.goToItems_div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.goToItems_text {
+    font-size: 18px;
+    font-weight: 600;
+    color: black;
+    margin: 0px;
+    text-align: start;
+    --checkbox-background: white;
+    --border-color: #0026AD;
+    --checkbox-background-checked: white;
+    --border-color-checked: #0026AD;
+}
+
+.mainGoToItemsCard {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    overflow-y: auto;
+    padding: 20px 0px;
+}
+
+.frequentlyCard {
+    background: linear-gradient(180deg, #FFFFFF 0%, #ECF0FA 100%);
+    width: 100%;
+    margin-top: 10px;
+    padding: 20px 20px 0px 20px;
+}
+
+.itemTotalCard {
+    background: white;
+    padding: 20px;
+}
+
+.itemTotal_text {
+    font-size: 14px;
+    font-weight: 400;
+    color: black;
+    margin: 0px;
+}
+
+.itemTotal_rs {
+    font-size: 14px;
+    font-weight: 400;
+    margin: 0px;
+}
+
+.itemTotalDiv {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding-bottom: 20px;
+}
+
+.deliveryFee_text {
+    font-size: 14px;
+    font-weight: 400;
+    color: #2CB562;
+    margin: 0px;
+}
+
+.totalPayableDiv {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.deliveryPartnerTip_text {
+    font-size: 14px;
+    font-weight: 400;
+    color: #97999B;
+    margin: 0px;
+}
+
+.deliveryInstructionsCard {
+    background: white;
+    padding: 20px;
+    margin-top: 10px;
+}
+
+.deliveryInstructions_text {
+    font-size: 16px;
+    font-weight: 500;
+    color: black;
+    margin: 0px;
+}
+
+.deliveryPartner_text {
+    font-size: 12px;
+    font-weight: 400;
+    color: #87848A;
+    margin: 0px;
+    padding-top: 10px;
+}
+
+.returnTheBagCard {
+    width: 100%;
+    border-radius: 12px;
+    border: 1px solid #0026AD;
+    padding: 10px;
+    margin-top: 20px;
+    display: flex;
+}
+
+.returnTheBag_img {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+}
+
+.returnTheBag_text {
+    font-size: 14px;
+    font-weight: 400;
+    color: black;
+    margin: 0px;
+}
+
+.returnThedes_text {
+    font-size: 12px;
+    font-weight: 400;
+    color: #87848A;
+    margin: 0px;
+    padding-top: 10px;
+}
+
+.ourDeliveryCard {
+    background: white;
+    padding: 20px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.ourDelivery_img {
+    width: 55px;
+    height: 55px;
+}
+
+.ourDelivery_text {
+    font-size: 14px;
+    font-weight: 400;
+    color: black;
+    margin: 0px;
+    line-height: 20px;
+    padding-left: 20px;
+}
+
+.deliveryTime_div {
+    width: 100%;
+    border-radius: 12px 12px 0px 0px;
+    background: #0026AD;
+    padding: 20px;
+    margin-top: 10px;
+}
+
+.deliveringMins_text {
+    font-size: 16px;
+    font-weight: 500;
+    color: white;
+    margin: 0px;
+}
+
+.deliveryTime_text {
+    font-size: 12px;
+    font-weight: 400;
+    color: white;
+    margin: 0px;
+    padding-top: 10px;
+}
+
+.changeSlot_btn {
+    --background: white;
+    width: 152px;
+    height: 42px;
+    --border-radius: 12px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #0026AD;
+    margin: 0px;
+}
+
+.home_div {
+    padding: 20px;
+}
+
+.home_text {
+    font-size: 14px;
+    font-weight: 500;
+    color: black;
+    margin: 0px;
+}
+
+.home_text1 {
+    font-size: 13px;
+    font-weight: 400;
+    color: black;
+    margin: 0px;
+}
+
+.changeAddress_text {
+    font-size: 12px;
+    font-weight: 500;
+    color: #0026AD;
+    margin: 0px;
+    padding-left: 5px;
+}
+
+.location_icon {
+    width: 15px;
+    height: 15px;
+    color: #0026AD;
+}
+
+.mainAddressDiv {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.pay_btn {
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+    color: white;
+    margin: 0px;
+    --border-radius: 12px;
+    width: 100%;
+    height: 48px;
+    --background: #0026AD;
+}
+
+.firstName_text {
+    width: 100%;
+    padding: 0px 10px 0px 20px !important;
+    height: 52px;
+    border-radius: 14px;
+    background: linear-gradient(104deg, rgba(255, 255, 255, 0.70) -4%, #FFF 111.16%);
+    border: 2px solid #0D34BF;
+    color: #0D34BF;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: 10px 0px 0px 0px;
+}
+
+.address_text {
+    width: 100%;
+    padding: 0px 10px 0px 20px !important;
+    height: 52px;
+    border-radius: 14px;
+    background: linear-gradient(104deg, rgba(255, 255, 255, 0.70) -4%, #FFF 111.16%);
+    border: 2px solid #0D34BF;
+    color: #0D34BF;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: 10px 0px 0px 0px;
+}
+
+.pinCode_text {
+    width: 100%;
+    padding: 0px 10px 0px 20px !important;
+    height: 52px;
+    border-radius: 14px;
+    background: linear-gradient(104deg, rgba(255, 255, 255, 0.70) -4%, #FFF 111.16%);
+    border: 2px solid #0D34BF;
+    color: #0D34BF;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: 10px 0px 0px 0px;
+}
+
+.phoneNumber_text {
+    width: 100%;
+    padding: 0px 10px 0px 20px !important;
+    height: 52px;
+    border-radius: 14px;
+    background: linear-gradient(104deg, rgba(255, 255, 255, 0.70) -4%, #FFF 111.16%);
+    border: 2px solid #0D34BF;
+    color: #0D34BF;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: 10px 0px 0px 0px;
+}
+
+.city_text {
+    width: 100%;
+    padding: 0px 10px 0px 20px !important;
+    height: 52px;
+    border-radius: 14px;
+    background: linear-gradient(104deg, rgba(255, 255, 255, 0.70) -4%, #FFF 111.16%);
+    border: 2px solid #0D34BF;
+    color: #0D34BF;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: 10px 0px 0px 0px;
+}
+
+.country_text {
+    width: 100%;
+    padding: 0px 10px 0px 20px !important;
+    height: 52px;
+    border-radius: 14px;
+    background: linear-gradient(104deg, rgba(255, 255, 255, 0.70) -4%, #FFF 111.16%);
+    border: 2px solid #0D34BF;
+    color: #0D34BF;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: 10px 0px 0px 0px;
+}
+
+.signIn_btn {
+    --border-radius: 14px;
+    --background: #0D34BF;
+    color: #FFF;
+    text-align: center;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    width: 100%;
+    margin: 0px;
+    padding-top: 50px;
+    height: 100px;
+    text-transform: none;
+}
+
+.cart_text1 {
+    font-size: 20px;
+    font-weight: 500;
+    color: #001F8D;
+    margin: 0px;
+}
+
+.closeCircle_icon {
+    height: 30px;
+    width: 30px;
+    color: #001F8D;
+}
+
+.color_dot {
+    width: 15px;
+    height: 15px;
+    background: black;
+    border-radius: 100%;
+    margin: 10px 0px 0px 0px;
+    border: 1px solid black;
+}
+
+.logout_text {
+    color: black;
+    font-size: 16px;
+    font-weight: 500;
+    margin: 20px 0px;
+    text-align: center;
+}
+
+.signIn_btn-1 {
+    border-radius: 14px;
+    --background: none;
+    border: 1px solid #001F8D;
+    color: #001F8D;
+    text-align: center;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    width: 150%;
+    margin: 0px;
+    height: 50px;
+    text-transform: none;
+    --box-shadow: none;
+}
+
+.signIn_btn-2 {
+    --border-radius: 14px;
+    --background: #001F8D;
+    color: #FFF;
+    text-align: center;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    width: 150%;
+    margin: 0px;
+    height: 50px;
+    text-transform: none;
+}
+
+.ionSelect {
+    background: white;
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px solid #0D34BF;
+    border-radius: 14px;
+    height: 52px;
+    color: #0D34BF;
+}
+
+.itemTotalCard1 {
+    background: white;
+    padding: 20px;
+    margin-top: 10px;
+}
+
+.ionRadioGroup {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.ionRedio {
+    color: #0026AD;
+    --color-checked: #0026AD;
+    --color: #0026AD;
+}
+
+.coupon_message {
+    font-size: 14px;
+    color: red;
+    margin: 0%;
+    margin-top: 5px !important;
+}
+
+.deliveryAddress_div {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0px 0px 0px;
+}
+
+.deliveryAddress_text {
+    width: 100%;
+    font-size: 18px;
+    font-weight: 600;
+    color: black;
+    margin: 0px;
+    text-align: start;
+}
+
+.deliveryAddress_text1 {
+    width: 100%;
+    font-size: 16px;
+    font-weight: 400;
+    color: black;
+    margin: 20px 0px 0px 0px;
+    text-align: start;
+}
+
+.change_btn {
+    --border-radius: 14px;
+    --background: #001F8D;
+    color: #FFF;
+    text-align: center;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    width: 150px;
+    margin: 0px;
+    height: 40px;
+    text-transform: none;
+}
+
+.email {
+    width: 100%;
+    padding: 0px 10px 0px 20px !important;
+    height: 52px;
+    border-radius: 14px;
+    background: linear-gradient(104deg, rgba(255, 255, 255, 0.70) -4%, #FFF 111.16%);
+    border: 2px solid #0D34BF;
+    color: #0D34BF;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: 10px 0px 0px 0px;
+}

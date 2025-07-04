@@ -1,0 +1,160 @@
+ion-header {
+    background: #001F8D;
+    // height: 156px;
+    background: #0D57FE;
+    padding-top: var(--safe-area-inset-top) !important;
+}
+
+.header-md {
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+}
+
+.mainHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.location_icon {
+    height: 24px;
+    width: 20px;
+    color: white;
+}
+
+.number_text {
+    font-size: 16px;
+    font-weight: 500;
+    color: white;
+    margin: 0px;
+    // padding-left: 10px;
+}
+
+.user_icon {
+    width: 18px;
+    height: 18px;
+}
+
+.sc-ion-searchbar-md-h {
+    --background: white !important;
+    --border-radius: 2px;
+    --box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+    --cancel-button-color: var(--ion-color-step-900, var(--ion-text-color-step-100, #1a1a1a));
+    --clear-button-color: initial;
+    --color: black !important;
+    --icon-color: var(--ion-color-step-600, var(--ion-text-color-step-400, #666666));
+    -webkit-padding-start: 8px;
+    padding-inline-start: 0px !important;
+    -webkit-padding-end: 8px;
+    padding-inline-end: 0px !important;
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
+    background: inherit;
+}
+
+.searchbar_text {
+    margin: 15px 0px 0px 0px;
+    --background: white;
+    background: white;
+    min-height: 45px !important;
+    height: 45px !important;
+}
+
+.mainZapppingDiv {
+    background: linear-gradient(90deg, #002CCA 0%, #2F5AF1 100%);
+    height: 28px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.zappping_text {
+    font-size: 14px;
+    font-style: italic;
+    font-weight: 600;
+    color: white;
+}
+
+.mainBackground {
+    --background: white;
+    height: 100%;
+    width: 100%;
+}
+
+.goToItems_div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.goToItems_text {
+    font-size: 18px;
+    font-weight: 600;
+    color: black;
+    margin: 0px;
+}
+
+.seeAll_div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.seeAll_text {
+    font-size: 16px;
+    font-weight: 500;
+    color: #001F8D;
+    margin: 0px;
+}
+
+.forwardOutline_text {
+    color: #001F8D;
+    width: 20px;
+    height: 20px;
+}
+
+.mainGoToItemsCard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.username_div {
+    background: white;
+    height: 20px;
+    width: 20px;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.username_text {
+    font-size: 14px;
+    color: #001F8D;
+    font-weight: 700;
+    margin: 0px;
+}
+
+.back_icon {
+    height: 25px;
+    width: 25px;
+    color: white;
+}
+
+.noProducts_div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    padding: 0px 20px;
+}
+
+.noProducts_text {
+    font-size: 24px;
+    font-weight: 700;
+    color: black;
+    margin: 0px;
+}

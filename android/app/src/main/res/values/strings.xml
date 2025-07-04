@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Hardwarelo</string>
+    <string name="title_activity_main">Hardwarelo</string>
+    <string name="package_name">com.hardwarelo.app</string>
+    <string name="custom_url_scheme">com.hardwarelo.app</string>
+</resources>

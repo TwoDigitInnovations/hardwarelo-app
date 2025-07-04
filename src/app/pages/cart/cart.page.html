@@ -1,0 +1,222 @@
+<ion-header>
+  <div class="mainHeader">
+    <div class="left" style="padding:20px 0px;">
+      <p class="cart_text">Cart {{cartData?.length}}</p>
+    </div>
+    <div class="center" *ngIf="cartData.length>0">
+      <ion-button class="emptyCart_btn" (click)="emptyCartPopup()">Empty Cart</ion-button>
+    </div>
+  </div>
+</ion-header>
+
+<ion-content class="mainBackground">
+  <div class="orderCard" *ngFor="let item of cartData;let i=index">
+    <ion-grid class="pad_0">
+      <ion-row style=" border-bottom: 1px solid #EDEDED; padding:20px 0px;position: relative;">
+        <p style="background:#0D57FE;
+;color:white;font-size: 12px;padding:5px;margin: 0px;">
+          <span style="font-size: 12px;">Delivery
+            in</span> : <span #popoutBox
+            style="font-weight: 900;">{{productdeliveryTime(item?.charge?.delivery_time)}}</span>
+        </p>
+        <ion-icon class="close_icon" name="close-outline" (click)="deleteItem(i)"></ion-icon>
+        <ion-col size="12" class="pad_0">
+          <div class="tataSaltDiv">
+            <img class="tataSalt_img" [src]="item?.varients[0]?.image[0]" />
+            <div style="padding-left: 10px;">
+              <p class="tataSalt_text">{{item?.name}}</p>
+              <p class="tataSalt_rs">₹{{item?.discount}} <del class="tataSalt_rs1">₹{{item?.price}}</del></p>
+              <p class="color_dot" *ngIf="item?.color" [ngStyle]="{background: item?.color}"></p>
+            </div>
+          </div>
+        </ion-col>
+        <ion-col size="6" class="pad_0"><ion-button class="tataSalt_btn">Charge
+            {{item?.charge?.charge}}</ion-button></ion-col>
+        <ion-col size="6" class="pad_0 mainCloseDiv">
+          <div class="d_flex">
+            <div class="remove_div" (click)="removeItem(item)">
+              <ion-icon class="remove_icon" name="remove-outline"></ion-icon>
+            </div>
+            <p class="input_text mar_0">{{item?.qty}}</p>
+            <div class="add_div" (click)="addItem(item)">
+              <ion-icon class="remove_icon" name="add-outline"></ion-icon>
+            </div>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+
+  <div class="availOffersCard" *ngIf="cartData.length>0">
+    <div class="mainAvailOffers" (click)="couponPage()">
+      <div class="center" style="gap: 10px;">
+        <img class="availOffers_img" src="../../../assets/images/image-8.png" />
+        <p class="availOffers_text">Avail Offers / Coupons</p>
+      </div>
+      <ion-icon class="forward_icon" name="chevron-forward-sharp"></ion-icon>
+    </div>
+    <div class="couponCode_div">
+      <ion-input [readonly]="couponDiscount" class="couponCode_text" type="text" placeholder="Coupon code"
+        name="couponCode" [(ngModel)]="couponCode"></ion-input>
+      <ion-button [disabled]="couponDiscount" class="apply_btn" (click)="couponApply()">Apply</ion-button>
+    </div>
+    <p class="coupon_message" *ngIf="couponMessage">{{couponMessage}}</p>
+  </div>
+
+  <div class="center flex_col" style="height: 300px; padding: 0px 20px;" *ngIf="cartData.length === 0">
+    <p style="color: black;">Your cart is empty</p>
+    <ion-button class="pay_btn" (click)="gotoHome()">CONTINUE TO SHOPPING</ion-button>
+  </div>
+
+  <div class="frequentlyCard" *ngIf="productData.length >0">
+    <div class="goToItems_div w_100">
+      <p class="goToItems_text w_100">Frequently Bought Together</p>
+    </div>
+    <div class="mainGoToItemsCard">
+      <app-product-card *ngFor="let item of productData" [item]="item"></app-product-card>
+    </div>
+  </div>
+
+  <div class="itemTotalCard" *ngIf="cartData.length>0">
+    <div class="itemTotalDiv">
+      <p class="itemTotal_text">Item Total</p>
+      <p class="itemTotal_rs" style="color: black;">₹{{cartTotal}}</p>
+    </div>
+
+    <div class="itemTotalDiv">
+      <p class="deliveryFee_text">Delivery Fee</p>
+      <p class="itemTotal_rs" style="color: black;">₹{{cartCharge}}</p>
+    </div>
+
+    <div class="itemTotalDiv" *ngIf="couponDiscount">
+      <p class="itemTotal_text">Coupon Discount</p>
+      <p class="itemTotal_rs" style="color: black;">₹{{couponDiscount}}</p>
+    </div>
+
+    <div class="totalPayableDiv">
+      <p class="itemTotal_text">Total Payable</p>
+      <p class="itemTotal_rs" style="color: black;">₹{{mainTotal}}</p>
+    </div>
+  </div>
+
+  <div class="itemTotalCard1" *ngIf="cartData.length>0">
+    <p class="goToItems_text w_100">Payment Method</p>
+    <div class="center" style="padding-top: 20px;">
+      <ion-radio-group value="USER" class="ionRadioGroup" name="payment_type" [(ngModel)]="payment_type">
+        <ion-radio class="ionRedio" mode="md" value="COD" labelPlacement="end">COD</ion-radio>
+        <ion-radio class="ionRedio" style="margin-left: 20px;" mode="md" value="Online"
+          labelPlacement="end">Online</ion-radio>
+      </ion-radio-group>
+    </div>
+    <div class="deliveryAddress_div">
+      <p class="deliveryAddress_text">Delivery Address</p>
+      <ion-button class="change_btn" (click)="isAlertOpen=true">Change</ion-button>
+    </div>
+    <p class="deliveryAddress_text1">{{shippingAddressData?.address}}, {{shippingAddressData?.city}},
+      {{shippingAddressData?.pinCode}}</p>
+  </div>
+  <form class="w_100" #gstForm="ngForm">
+
+    <div class="itemTotalCard1" *ngIf="cartData.length>0">
+      <!-- <p class="goToItems_text w_100">Payment Method</p> -->
+      <ion-checkbox class="goToItems_text" name="gst_request" [checked]="gstModel?.gst_request"
+        [(ngModel)]="gstModel.gst_request" labelPlacement="end">Request for GST</ion-checkbox>
+
+      <div class="deliveryAddress_div flex_col mar_0" *ngIf="gstModel?.gst_request">
+        <ion-input class="email" type="text" placeholder="Legal Name" name="legal_name"
+          [(ngModel)]="gstModel.legal_name" #legal_name="ngModel" [required]="gstModel?.gst_request"></ion-input>
+        <p class="validField" *ngIf="submitted && gstModel?.gst_request && legal_name.errors?.['required']">
+          Legal name is required.
+        </p>
+        <ion-input class="email" type="text" placeholder="GST Number" name="gst_number"
+          [(ngModel)]="gstModel.gst_number" #gst_number="ngModel" [required]="gstModel?.gst_request"></ion-input>
+        <p class="validField" *ngIf="submitted && gstModel?.gst_request && gst_number?.errors?.['required']">
+          GST number is required.
+        </p>
+      </div>
+    </div>
+    <!-- (click)="placeOrder(gstForm)" -->
+    <div class="home_div" *ngIf="cartData.length>0">
+      <ion-button class="pay_btn" (click)="checkQuqntityFromServer(gstForm)">CONTINUE TO PAY ₹{{mainTotal}}</ion-button>
+    </div>
+  </form>
+
+  <ion-modal [isOpen]="isAlertOpen" (didDismiss)="isAlertOpen=false" cssClass="calendar">
+    <ng-template>
+      <ion-content class="ion-padding content">
+        <div class="h_100 w_100 center">
+          <div class="mainIonContent_div">
+            <div class="w_100" *ngIf="!showPayment">
+              <div class="d_flex" style="justify-content: space-between; align-items: center;">
+                <p class="cart_text1">Shipping Address</p>
+                <ion-icon class="closeCircle_icon" name="close-circle-outline" (click)="isAlertOpen=false"></ion-icon>
+              </div>
+
+              <form class="w_100" #shippingAddressForm="ngForm">
+                <ion-input class="firstName_text" type="text" placeholder="First Name" name="firstName"
+                  [(ngModel)]="shippingAddressModel.firstName" #firstName="ngModel" required></ion-input>
+                <p class="validField" *ngIf="submitted && firstName?.errors?.['required']">
+                  First Name is required.
+                </p>
+
+                <ion-input class="address_text" type="text" placeholder="Address" name="address"
+                  [(ngModel)]="shippingAddressModel.address" #address="ngModel" required></ion-input>
+                <!-- inputmode="numeric" -->
+                <p class="validField" *ngIf="submitted && address?.errors?.['required']">
+                  Address is required.
+                </p>
+
+                <ion-input class="pinCode_text" type="number" placeholder="Pin Code" name="pinCode"
+                  [(ngModel)]="shippingAddressModel.pinCode" #pinCode="ngModel" required></ion-input>
+                <p class="validField" *ngIf="submitted && pinCode?.errors?.['required']">
+                  Pin Code is required.
+                </p>
+
+                <ion-input class="phoneNumber_text" type="number" placeholder="Phone number" name="phoneNumber"
+                  [(ngModel)]="shippingAddressModel.phoneNumber" #phoneNumber="ngModel" required></ion-input>
+                <p class="validField" *ngIf="submitted && phoneNumber?.errors?.['required']">
+                  Phone Number is required.
+                </p>
+
+                <ion-input class="city_text" type="text" placeholder="City" name="city"
+                  [(ngModel)]="shippingAddressModel.city" #city="ngModel" required></ion-input>
+                <p class="validField" *ngIf="submitted && city?.errors?.['required']">
+                  City is required.
+                </p>
+
+                <ion-button class="signIn_btn" (click)="createProductRquest(shippingAddressForm)">Submit</ion-button>
+                <!-- Place Order -->
+              </form>
+            </div>
+            <div *ngIf="showPayment && payPalConfig">
+              <div class="d_flex" style="justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                <p class="cart_text1">{{'PayPal Payment'}}</p>
+                <ion-icon class="closeCircle_icon" name="close-circle-outline"
+                  (click)="shippingAddressForms()"></ion-icon>
+              </div>
+              <!-- <ngx-paypal [config]="payPalConfig"></ngx-paypal> -->
+            </div>
+          </div>
+        </div>
+      </ion-content>
+    </ng-template>
+  </ion-modal>
+
+  <ion-modal [isOpen]="isAlertOpen2" (didDismiss)="isAlertOpen2=false" cssClass="calendar1">
+    <ng-template>
+      <ion-content class="ion-padding content" style="--background: white !important;">
+        <div class="h_100 w_100 center flex_col" style="position: relative;">
+          <ion-icon style="position: absolute; top: 0px; right: 0px; height: 30px; width: 30px;  color: #001F8D;"
+            (click)="isAlertOpen2=false" name="close"></ion-icon>
+          <p class="logout_text">Are you sure of clearing
+            your cart?</p>
+
+          <div class="w_100 center" style="gap: 20px;">
+            <ion-button class="signIn_btn-1" (click)="isAlertOpen2=false">No</ion-button>
+            <ion-button class="signIn_btn-2" (click)="emptyCart()">Yes, Clear</ion-button>
+          </div>
+        </div>
+      </ion-content>
+    </ng-template>
+  </ion-modal>
+</ion-content>

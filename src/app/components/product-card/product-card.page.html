@@ -1,0 +1,40 @@
+<div class="goToItemsCard center flex_col" [ngStyle]="{'width': width || '170px'}">
+  <div class="starDiv" *ngIf="off">
+    <div>
+      <p class="offers_text">{{off}}% <br />off</p>
+    </div>
+
+  </div>
+  <img class="goToImg" src={{item?.varients[0]?.image[0]}} (click)="productDetailsPage(item?._id)" />
+  <p style="background:#0D57FE;
+;color:white;font-size: 12px;width: 100%;padding:5px;margin: 0px;">
+    <span style="font-size: 12px;">Delivery
+      in</span> : <span #popoutBox style="font-weight: 900;">{{deliveryTime}}</span>
+  </p>
+  <div style="padding: 10px;width: 100%;">
+    <div class="w_100">
+      <p class="ultraCement_text">{{item?.name}}</p>
+    </div>
+
+    <div class="goToItems_div w_100">
+      <del class="ultraCement_text2">₹{{item?.price}}</del>
+      <p class="ultraCement_text3">₹{{discount}}</p>
+    </div>
+
+    <div class="right w_100">
+      <div class="addIconDiv" *ngIf="!selctedCartItem?._id">
+        <ion-icon class="addIcon" name="add-sharp" (click)="addCart()"></ion-icon>
+      </div>
+    </div>
+
+    <div class="mainQty_div" *ngIf="selctedCartItem?._id">
+      <div class="remove_div" (click)="removeItem(selctedCartItem)">
+        <ion-icon class="remove_icon" name="remove-outline"></ion-icon>
+      </div>
+      <p class="input_text mar_0">{{selctedCartItem?.qty}}</p>
+      <div class="add_div" (click)="addItem(selctedCartItem)">
+        <ion-icon class="remove_icon" name="add-outline"></ion-icon>
+      </div>
+    </div>
+  </div>
+</div>

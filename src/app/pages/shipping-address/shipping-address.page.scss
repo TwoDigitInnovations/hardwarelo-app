@@ -1,0 +1,143 @@
+ion-header {
+    background: #001F8D;
+    height: 64px;
+}
+
+.header-md {
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+}
+
+.mainHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0px 20px;
+}
+
+.cart_text {
+    font-size: 20px;
+    font-weight: 500;
+    color: white;
+    margin: 0px;
+    padding-left: 10px;
+}
+
+.back_icon {
+    height: 25px;
+    width: 25px;
+    color: white;
+}
+
+.mainBackground {
+    --background: #ECF0FA;
+    height: 100%;
+    width: 100%;
+}
+
+.firstName_text {
+    width: 100%;
+    padding: 0px 10px 0px 20px !important;
+    height: 52px;
+    border-radius: 14px;
+    background: linear-gradient(104deg, rgba(255, 255, 255, 0.70) -4%, #FFF 111.16%);
+    border: 2px solid #0D34BF;
+    color: #0D34BF;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: 10px 0px 0px 0px;
+}
+
+.address_text {
+    width: 100%;
+    padding: 0px 10px 0px 20px !important;
+    height: 52px;
+    border-radius: 14px;
+    background: linear-gradient(104deg, rgba(255, 255, 255, 0.70) -4%, #FFF 111.16%);
+    border: 2px solid #0D34BF;
+    color: #0D34BF;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: 10px 0px 0px 0px;
+}
+
+.pinCode_text {
+    width: 100%;
+    padding: 0px 10px 0px 20px !important;
+    height: 52px;
+    border-radius: 14px;
+    background: linear-gradient(104deg, rgba(255, 255, 255, 0.70) -4%, #FFF 111.16%);
+    border: 2px solid #0D34BF;
+    color: #0D34BF;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: 10px 0px 0px 0px;
+}
+
+.phoneNumber_text {
+    width: 100%;
+    padding: 0px 10px 0px 20px !important;
+    height: 52px;
+    border-radius: 14px;
+    background: linear-gradient(104deg, rgba(255, 255, 255, 0.70) -4%, #FFF 111.16%);
+    border: 2px solid #0D34BF;
+    color: #0D34BF;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: 10px 0px 0px 0px;
+}
+
+.city_text {
+    width: 100%;
+    padding: 0px 10px 0px 20px !important;
+    height: 52px;
+    border-radius: 14px;
+    background: linear-gradient(104deg, rgba(255, 255, 255, 0.70) -4%, #FFF 111.16%);
+    border: 2px solid #0D34BF;
+    color: #0D34BF;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: 10px 0px 0px 0px;
+}
+
+.country_text {
+    width: 100%;
+    padding: 0px 10px 0px 20px !important;
+    height: 52px;
+    border-radius: 14px;
+    background: linear-gradient(104deg, rgba(255, 255, 255, 0.70) -4%, #FFF 111.16%);
+    border: 2px solid #0D34BF;
+    color: #0D34BF;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: 10px 0px 0px 0px;
+}
+
+.signIn_btn {
+    --border-radius: 14px;
+    --background: #0D34BF;
+    color: #FFF;
+    text-align: center;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    width: 100%;
+    margin: 0px;
+    padding-top: 50px;
+    height: 100px;
+    text-transform: none;
+}

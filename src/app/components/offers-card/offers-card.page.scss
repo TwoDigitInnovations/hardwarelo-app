@@ -1,0 +1,65 @@
+.card {
+    background: linear-gradient(74.24deg, #0D34BF 0%, #7493FF 100%);
+    width: 100%;
+    height: 165px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+
+.upTo_text {
+    font-size: 12px;
+    font-weight: 600;
+    color: white;
+    margin: 0px;
+}
+
+.off_text {
+    font-size: 29px;
+    font-weight: 700;
+    color: white;
+    margin: 0px;
+    padding-top: 5px;
+}
+
+.onFirstOrder_text {
+    font-size: 19px;
+    font-weight: 600;
+    color: white;
+    margin: 0px;
+    padding-top: 5px;
+    border-bottom: 1px solid white;
+    padding-bottom: 5px;
+}
+
+.bestOffers_div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 10px;
+}
+
+.bestOffers_text {
+    font-size: 19px;
+    font-weight: 400;
+    color: white;
+    margin: 0px;
+}
+
+.circleDiv {
+    width: 25px;
+    height: 25px;
+    border-radius: 100%;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.forward_icon {
+    width: 13px;
+    height: 13px;
+}
+
+.imges {
+    height: 165px;
+}
