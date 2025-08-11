@@ -292,13 +292,14 @@ export class CartPage implements OnInit {
 
   async payWithRazorpay(order_id: any) {
     const options: any = {
-      key: 'rzp_test_N00ngDeR3qA8rN',
+      // key: 'rzp_test_N00ngDeR3qA8rN',
+      key: 'rzp_live_E3iPHUjgq3B6dh',
       amount: Number(this.mainTotal) * 100,
       description: 'Great offers',
-      image: 'https://i.imgur.com/3g7nmJC.jpg',
+      image: 'https://harwarelo-assets.s3.ap-south-1.amazonaws.com/hardware_lo_File_4-03.jpg',
       order_id,//Order ID generated in Step 1
       currency: 'INR',
-      name: 'Hardwarelo',
+      // name: 'Hardwarelo',
       prefill: {
         email: this.userDetail?.email || '',
         contact: this.userDetail?.shiping_address?.phoneNumber || this.shippingAddressModel?.phoneNumber
@@ -308,6 +309,7 @@ export class CartPage implements OnInit {
       }
     }
     try {
+      console.log(options)
       let data = await Checkout.open(options);
       console.log(data.response + "AcmeCorp");
       console.log(JSON.stringify(data))
